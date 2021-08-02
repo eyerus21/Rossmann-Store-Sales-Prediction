@@ -1,22 +1,22 @@
 import streamlit as st
 import awesome_streamlit as ast
-import src.pages.home
-import src.pages.data 
-import src.pages.rawplots
-import src.pages.pred
-import src.pages.postplots
-import src.pages.insights
+import home
+import datas 
+import rawplot
+import pred
+import postplots
+import insights
 
 ast.core.services.other.set_logging_format()
 
 # create the pages
 PAGES = {
-    "Home": src.pages.home,
-    "Raw Data":src.pages.data,
-    "Raw Data visualisations": src.pages.rawplots,
-    "Run Predictions": src.pages.pred,
-    "Predicted data +  visualisations": src.pages.postplots,
-    "Insights": src.pages.insights
+    "Home":home,
+    "Raw Data":datas,
+    "Raw Data visualisations":rawplot,
+    "Run Predictions":pred,
+    "Predicted data +  visualisations":postplots,
+    "Insights":insights
 }
 
 # render the pages
@@ -41,3 +41,4 @@ def main():
 # run it
 if __name__ == "__main__":
     main()
+    
